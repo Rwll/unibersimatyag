@@ -11,9 +11,14 @@
 |
 */
 
-Route::get('/', array(
+Route::get('/admin_dashboard', array(
 	'as'	=>	'home_route',
-	'uses'	=>	'HomeController@showWelcome'
+	'uses'	=>	'AdminController@showWelcome'
 ));
-Route::get('/aboutus', 'HomeController@showAboutUs');
-Route::get('/back', 'HomeController@showBack');
+
+Route::get('/', array(
+	'as'	=>	'home_route2',
+	'uses'	=>	'AdminController@showWelcome'
+));
+Route::get('/admin_conversations', 'AdminController@showAdminConversations');
+Route::get('/admin_manage_universities', 'AdminController@showManageAdminUniversities');

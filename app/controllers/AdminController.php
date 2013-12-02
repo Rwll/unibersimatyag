@@ -2,39 +2,19 @@
 
 class AdminController extends BaseController {
 
-	public function showDashboard() 
+	public function showWelcome() 
 	{
-		return View::make('dashboard');
+		return View::make('admin_dashboard');
 	}
 
-	public function showConversations() 
+	public function showAdminConversations() 
 	{
-		return	View::make('conversations');
+		return	View::make('admin_conversations');
 	}
 
-	public function showManageUniversities() 
+	public function showManageAdminUniversities() 
 	{
-		return	View::make('manageuniversities');
-	}
-
-	public function showManageAlumni() 
-	{
-		return	View::make('managealumni');
-	}
-
-	public function showManageAdministrators() 
-	{
-		return	View::make('manageadministrators');
-	}
-
-	public function showStatistics() 
-	{
-		return	View::make('statistics');
-	}
-
-	public function showBroadcasts() 
-	{
-		return	View::make('broadcasts');
+		return	View::make('admin_manage_universities');
 	}
 
 

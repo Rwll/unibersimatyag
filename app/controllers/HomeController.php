@@ -17,16 +17,17 @@ class HomeController extends BaseController {
 
 	public function showWelcome() 
 	{
-		return View::make('hello');
+		return View::make('admin_dashboard');
 	}
 
-	public function showAboutUs() 
+	public function showAdminConversations() 
 	{
-		return	View::make('about');
+		return	View::make('admin_conversations');
 	}
-	public function showBack() 
+	
+	public function showManageAdminUniversities() 
 	{
-		return	View::make('back');
+		return	View::make('admin_manage_universities');
 	}
 
 }
