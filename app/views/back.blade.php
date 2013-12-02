@@ -1,0 +1,1 @@
+{{ HTML::linkRoute('home_route','Simsimi') }}

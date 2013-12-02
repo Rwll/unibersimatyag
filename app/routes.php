@@ -11,5 +11,9 @@
 |
 */
 
-Route::get('/', 'HomeController@showWelcome');
+Route::get('/', array(
+	'as'	=>	'home_route',
+	'uses'	=>	'HomeController@showWelcome'
+));
 Route::get('/aboutus', 'HomeController@showAboutUs');
+Route::get('/back', 'HomeController@showBack');
