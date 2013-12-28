@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersTable extends Migration {
+class CreateAdminsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -11,13 +11,13 @@ class CreateUsersTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('users', function($table)
+		Schema::create('admins', function($table)
 	    {
 	        $table->increments('id');
 	        $table->string('first_name');
 	        $table->string('last_name');
 	        $table->string('middle_name');
-	        $table->string('email')->unique();
+	        $table->string('username');
 	        $table->string('password');
 	        $table->timestamps();
 	    });
@@ -30,7 +30,7 @@ class CreateUsersTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('users');
+		Schema::drop('admins');
 	}
 
 }

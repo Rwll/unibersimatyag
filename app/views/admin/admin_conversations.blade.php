@@ -26,37 +26,53 @@
                         <li><a href="#tab3" data-toggle="tab">Sent</a></li>
                     </ul>
                     <div class="tab-content">
-                        <div class="tab-pane panel panel-default active" id="tab1">
+                        <div class="tab-pane panel panel-default active" 
+                        id="tab1">
                             <div class="panel-body">
                                 <form role="form">
                                     <div class="row">
                                         <div class="form-group col-md-6">
-                                            <label for="recipients"><strong> Recipients</strong></label>
+                                            <label for="recipients"><strong> 
+                                            Recipients</strong></label>
                                             <div class="input-group">
-                                                <input type="text" class="form-control" id="recipients" placeholder="...">
+                                                <input type="text" 
+                                                class="form-control" 
+                                                id="recipients" 
+                                                placeholder="...">
                                                 <span class="input-group-btn">
-                                                <button class="btn btn-info" type="button"><i class="fa fa-plus fa-fw"></i></button>
+                                                <button class="btn btn-info" 
+                                                type="button">
+                                                <i class="fa fa-plus fa-fw">
+                                                </i></button>
                                                 </span>
                                             </div>
                                             <!-- /input-group -->
                                         </div>
-                                        <div class="col-md-7">sasada, sdsadsa</div>
+                                        <div class="col-md-7">sasada</div>
                                     </div>
                                     <div class="row">
                                         <div class="form-group col-md-6">
-                                            <label for="subject"><strong> Subject</strong></label>
-                                            <input type="text" name="subject" class="form-control" id="subject" placeholder="...">
+                                            <label for="subject"><strong> 
+                                            Subject</strong></label>
+                                            <input type="text" name="subject" 
+                                            class="form-control" id="subject" 
+                                            placeholder="...">
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="form-group col-md-6">
-                                            <label><strong> Message</strong></label>
-                                            <textarea class="form-control" rows="3"></textarea>
+                                            <label><strong> Message</strong>
+                                            </label>
+                                            <textarea class="form-control" 
+                                            rows="3"></textarea>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="form-group col-md-5">
-                                            <button type="submit" class="btn btn-primary"><i class="fa fa-envelope fa-fw"></i> Send</button>
+                                            <button type="submit" 
+                                            class="btn btn-primary">
+                                            <i class="fa fa-envelope fa-fw">
+                                            </i> Send</button>
                                         </div>
                                     </div>
                                 </form>
@@ -68,15 +84,42 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
                                             <h4 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                                <a data-toggle="collapse" 
+                                                data-parent="#accordion" 
+                                                href="#collapseOne">
                                                 UmakAdmin - this is the subject
                                                 </a>
                                             </h4>
                                         </div>
-                                        <div id="collapseOne" class="panel-collapse collapse in">
+                                        <div id="collapseOne" 
+                                        class="panel-collapse collapse in">
                                             <div class="panel-body">
-                                                <small>11/21/13 11:21:34</small><br>
-                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                                <small>11/21/13 11:21:34</small>
+                                                <br>
+                                                Anim pariatur cliche 
+                                                reprehenderit, enim eiusmod 
+                                                high life accusamus terry 
+                                                richardson ad squid. 3 wolf
+                                                 moon officia aute, non 
+                                                 cupidatat skateboard dolor 
+                                                 brunch. Food truck quinoa 
+                                                 nesciunt laborum eiusmod. 
+                                                 Brunch 3 wolf moon tempor, 
+                                                 sunt aliqua put a bird on it 
+                                                 squid single-origin coffee 
+                                                 nulla assumenda shoreditch et.
+                                                  Nihil anim keffiyeh helvetica,
+                                                   craft beer labore wes 
+                                                   anderson cred nesciunt 
+                                                   sapiente ea proident. Ad 
+                                                   vegan excepteur butcher 
+                                                   vice lomo. Leggings occaecat 
+                                                   craft beer farm-to-table, 
+                                                   raw denim aesthetic synth 
+                                                   nesciunt you probably 
+                                                   haven't heard of them 
+                                                   accusamus labore 
+                                                   sustainable VHS.
                                                 <br><br>
                                                 <div class="text-right">
                                                     <button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">

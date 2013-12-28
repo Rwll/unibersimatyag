@@ -45,4 +45,8 @@ Route::get('/uadmin_conversations', 'UniversityAdminController@showUAdminConvers
 Route::get('/uadmin_manage_alumni', 'UniversityAdminController@showUManageAdminAlumni');
 Route::get('/uadmin_statistics', 'UniversityAdminController@showUAdminStats');
 Route::get('/uadmin_broadcasts', 'UniversityAdminController@showUAdminBroadcasts');
+Route::get('/register_alumni_pg1', 'UniversityAdminController@showRegisterAlumni1');
+Route::get('/register_alumni_pg2', 'UniversityAdminController@showRegisterAlumni2');
+Route::get('/register_alumni_pg3', 'UniversityAdminController@showRegisterAlumni3');
+Route::get('/register_alumni_pg4', 'UniversityAdminController@showRegisterAlumni4');
 /*End University Admin*/
