@@ -11,7 +11,7 @@
 |
 */
 
-/*Super Admin*/
+/*Super Admin*/       
 Route::get('/admin_dashboard', array(
 	'as'	=>	'home_routeA1',
 	'uses'	=>	'AdminController@showAdminDashboard'
@@ -22,12 +22,26 @@ Route::get('/', array(
 	'uses'	=>	'AdminController@showAdminDashboard'
 ));
 
+Route::post('admin/admin_login',array(
+        'as'        =>        'admin-login-go',
+        'uses'        =>        'AdminController@goLogin'
+));
+
+Route::group(array('prefix' => 'admin', 'before' => 'auth.admin'),function(){
+        
+        Route::get('logout',array(
+                'as'        =>        'admin-out',
+                'uses'        =>        'AdminController@goLogout'
+        ));
+});
+
 Route::get('/admin_conversations', 'AdminController@showAdminConversations');
 Route::get('/admin_manage_universities', 'AdminController@showManageAdminUniversities');
 Route::get('/admin_manage_alumni', 'AdminController@showManageAdminAlumni');
 Route::get('/admin_manage_administrators', 'AdminController@showManageAdminAdministrators');
 Route::get('/admin_statistics', 'AdminController@showAdminStats');
 Route::get('/admin_broadcasts', 'AdminController@showAdminBroadcasts');
+Route::get('/admin_login', 'AdminController@showAdminLogin');
 /*End Super Admin*/
 
 /*University Admin*/

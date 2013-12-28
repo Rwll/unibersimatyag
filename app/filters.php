@@ -38,6 +38,17 @@ Route::filter('auth', function()
 	if (Auth::guest()) return Redirect::guest('login');
 });
 
+Route::filter('auth.admin', function()
+{
+
+        if(Auth::check()){
+                if(Auth::User()->role != 'admin')
+                        return 'You are not allowed to access this page!';
+        }else {
+                return Redirect::to('admin/admin_login');
+        }
+        
+});
 
 Route::filter('auth.basic', function()
 {

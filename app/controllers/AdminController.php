@@ -43,4 +43,44 @@ class AdminController extends BaseController {
 		return	View::make('admin/admin_broadcasts')
 			->with('title', 'Broadcasts');
 	}
+
+	public function showAdminLogin() 
+	{
+		return	View::make('admin/admin_login')
+			->with('title', 'Login');
+	}
+
+	public function goLogin()
+        {
+                $validation = User::validate(Input::all());
+
+                if(!($validation->fails())){
+                        if(Auth::attempt(array(
+                                'username'        => Input::get('username'),
+                                'password'        => Input::get('password'),
+                                'role'                => 'admin'
+                                ))){
+                                return Redirect::Route('admin_dashboard');
+                        } else {
+                                return Redirect::Route('admin_login')
+                                        ->withErrors('Incorrect username or password')
+                                        ->withInput(Input::except('password'));
+                        }
+                }else{
+                        return Redirect::Route('admin_login')
+                                ->withErrors($validation)
+                                ->withInput(Input::except('password'));
+                }
+        }
+
+        public function goLogout()
+        {
+                Auth::logout();
+                if(Auth::guest()){
+                        return Redirect::Route('admin_login');
+                }else {
+                        return Redirect::Route('admin_dashboard');
+                }
+        }
+ 
 }
