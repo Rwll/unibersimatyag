@@ -47,14 +47,14 @@
                                 <td>
                                     <button class="btn btn-primary btn-xs" 
                                         data-toggle="modal" data-target="#myModal">
-                                    Settings
+                                    Detail Settings
                                     </button>
                                     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-header">
                                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                                    <h4 class="modal-title" id="myModalLabel">Settings</h4>
+                                                    <h4 class="modal-title" id="myModalLabel">Edit Info</h4>
                                                 </div>
                                                 <div class="modal-body">
                                                     <form class="form-horizontal" role="form">
@@ -88,6 +88,13 @@
                                                                 <input type="text" class="form-control" id="address">
                                                             </div>
                                                         </div>
+                                                        <div class="form-group">
+                                                            <label for="address" class="col-sm-2 control-label">Description: </label>
+                                                            <div class="col-sm-6">
+                                                        		<textarea class="form-control" 
+                                            						rows="3"></textarea>
+                                            				</div>
+                                            			</div>
                                                     </form>
                                                 </div>
                                                 <div class="modal-footer">
@@ -161,6 +168,13 @@
                                 <input type="text" class="form-control" id="address">
                             </div>
                         </div>
+                         <div class="form-group">
+                            <label for="address" class="col-sm-2 control-label">Description: </label>
+                            <div class="col-sm-6">
+                        		<textarea class="form-control" 
+            						rows="3"></textarea>
+            				</div>
+            			</div>
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
                                 <button class="btn btn-primary btn-xs" 

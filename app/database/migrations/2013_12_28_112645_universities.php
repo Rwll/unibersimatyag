@@ -11,7 +11,17 @@ class Universities extends Migration {
 	 */
 	public function up()
 	{
-		//
+		Schema::create('universities', function($table)
+	    {
+	        $table->increments('id');
+	        $table->string('name');
+	        $table->string('website');
+	        $table->string('email');
+	        $table->integer('contact_number');
+	        $table->string('address');
+	        $table->string('description');
+	        $table->timestamps();
+	    });	
 	}
 
 	/**
@@ -21,7 +31,7 @@ class Universities extends Migration {
 	 */
 	public function down()
 	{
-		//
+		Schema::drop('universities');
 	}
 
 }
