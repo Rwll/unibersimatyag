@@ -45,7 +45,7 @@ Route::filter('auth.admin', function()
                 if(Auth::User()->role != 'admin')
                         return 'You are not allowed to access this page!';
         }else {
-                return Redirect::to('admin/admin_login');
+                return Redirect::Route('admin-login');
         }
         
 });

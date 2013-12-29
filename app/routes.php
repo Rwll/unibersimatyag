@@ -12,14 +12,9 @@
 */
 
 /*Super Admin*/       
-Route::get('/admin_dashboard', array(
-	'as'	=>	'home_routeA1',
-	'uses'	=>	'AdminController@showAdminDashboard'
-));
-
-Route::get('/', array(
-	'as'	=>	'home_routeA',
-	'uses'	=>	'AdminController@showAdminDashboard'
+Route::get('/admin_login',array(
+        'as'        =>        'admin-login',
+        'uses'        =>        'AdminController@showAdminLogin'
 ));
 
 Route::post('admin/admin_login',array(
@@ -29,19 +24,51 @@ Route::post('admin/admin_login',array(
 
 Route::group(array('prefix' => 'admin', 'before' => 'auth.admin'),function(){
         
-        Route::get('logout',array(
-                'as'        =>        'admin-out',
-                'uses'        =>        'AdminController@goLogout'
-        ));
-});
+    Route::get('logout',array(
+            'as'        =>        'admin-out',
+            'uses'        =>        'AdminController@goLogout'
+    ));
 
-Route::get('/admin_conversations', 'AdminController@showAdminConversations');
-Route::get('/admin_manage_universities', 'AdminController@showManageAdminUniversities');
-Route::get('/admin_manage_alumni', 'AdminController@showManageAdminAlumni');
-Route::get('/admin_manage_administrators', 'AdminController@showManageAdminAdministrators');
-Route::get('/admin_statistics', 'AdminController@showAdminStats');
-Route::get('/admin_broadcasts', 'AdminController@showAdminBroadcasts');
-Route::get('/admin_login', 'AdminController@showAdminLogin');
+	Route::get('/admin_dashboard', array(
+		'as'	=>	'home_routeA1',
+		'uses'	=>	'AdminController@showAdminDashboard'
+	));
+
+	Route::get('/', array(
+		'as'	=>	'home_routeA',
+		'uses'	=>	'AdminController@showAdminDashboard'
+	));
+
+	Route::get('/admin_conversations', array(
+		'as'	=>	'admin-conversations',
+		'uses'	=>	'AdminController@showAdminConversations'
+	));
+
+	Route::get('/admin_manage_universities', array(
+		'as'	=>	'admin-manage-universities',
+		'uses'	=>	'AdminController@showManageAdminUniversities'
+	));
+
+	Route::get('/admin_manage_alumni', array(
+		'as'	=>	'admin-manage-alumni',
+		'uses'	=>	'AdminController@showManageAdminAlumni'
+	));
+
+	Route::get('/admin_manage_administrators', array(
+		'as'	=>	'admin-manage-admins',
+		'uses'	=>	'AdminController@showManageAdminAdministrators'
+	));
+
+	Route::get('/admin_statistics', array(
+		'as'	=>	'admin-statistics',
+		'uses'	=>	'AdminController@showAdminStats'
+	));
+
+	Route::get('/admin_broadcasts', array(
+		'as'	=>	'admin-broadcasts',
+		'uses'	=>	'AdminController@showAdminBroadcasts'
+	));
+});
 /*End Super Admin*/
 
 /*University Admin*/

@@ -3,8 +3,8 @@
     <head>
         <title>Admin Dashboard</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="assets/css/bootstrap.css" rel="stylesheet">
-        <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+        {{ HTML::style('assets/css/bootstrap.css') }}
+        {{ HTML::style('assets/font-awesome/css/font-awesome.css') }}
     </head>
     <body>
         @include('site_objects.admin.navbar')
@@ -44,7 +44,7 @@
             </div>
         </div>
         @include('site_objects.admin.footer')
-        <script src="assets/js/jquery.js"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
+        {{ HTML::script('assets/js/jquery.js') }}
+		{{ HTML::script('assets/js/bootstrap.min.js') }}
     </body>
 </html>

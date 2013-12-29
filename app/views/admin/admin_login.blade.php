@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Administrator</title>
+        <title>Administrator - {{ $title }}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="assets/css/bootstrap.css" rel="stylesheet">
-        <link href="assets/css/signin.css" rel="stylesheet">
-        <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+        {{ HTML::style('assets/css/bootstrap.css') }}
+        {{ HTML::style('assets/css/signin.css') }}
+        {{ HTML::style('assets/font-awesome/css/font-awesome.css') }}
+        
     </head>
     <body>
 		<div class="container">
@@ -15,18 +16,20 @@
 		            <div class="account-wall">
 		                <img class="profile-img" src="assets/img/icon.png"
 		                    alt="">
-		                <form class="form-signin">
-		                <input type="text" class="form-control" placeholder="Username" required autofocus>
+		                
+                        <form class="form-signin" action="{{ URL::Route('admin-login-go') }}" method="post">
+		                <input name="username" type="text" class="form-control" placeholder="Username" required autofocus>
 		                <br>
-		                <input type="password" class="form-control" placeholder="Password" required>
+		                <input name="password" type="password" class="form-control" placeholder="Password" required>
 		                <button class="btn btn-md btn-primary btn-block" type="submit">
 		                Sign in</button>
+		                
 		                </form>
 		            </div>
 		        </div>
 		    </div>
 		</div>
- 		<script src="assets/js/jquery.js"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
+		{{ HTML::script('assets/js/jquery.js') }}
+		{{ HTML::script('assets/js/bootstrap.min.js') }}
     </body>
 </html>
