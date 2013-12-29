@@ -74,7 +74,7 @@ Route::get('/uadmin_dashboard', array(
 	'uses'	=>	'UniversityAdminController@showUAdminDashboard'
 ));
 
-Route::get('/', array(
+Route::get('/uadmin_home', array(
 	'as'	=>	'univ_admin_dashboard',
 	'uses'	=>	'UniversityAdminController@showUAdminDashboard'
 ));
