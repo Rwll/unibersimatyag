@@ -12,30 +12,27 @@
 */
 
 /*Super Admin*/       
-Route::get('/admin_login',array(
-        'as'        =>        'admin-login',
-        'uses'        =>        'AdminController@showAdminLogin'
-));
+Route::group(array('before' => 'guest'),function(){
+	Route::get('/login',array(
+        'as'    =>  'admin-login',
+        'uses'  =>  'AdminController@showAdminLogin'
+	));
 
-Route::post('admin/admin_login',array(
-        'as'        =>        'admin-login-go',
-        'uses'        =>        'AdminController@goLogin'
-));
+	Route::post('admin/login',array(
+        'as'    =>  'admin-login-go',
+        'uses'  =>  'AdminController@goLogin'
+	));
+});
 
 Route::group(array('prefix' => 'admin', 'before' => 'auth.admin'),function(){
         
     Route::get('logout',array(
-            'as'        =>        'admin-out',
-            'uses'        =>        'AdminController@goLogout'
+        'as'    =>  'admin-out',
+        'uses'  =>  'AdminController@goLogout'
     ));
 
 	Route::get('/admin_dashboard', array(
-		'as'	=>	'home_routeA1',
-		'uses'	=>	'AdminController@showAdminDashboard'
-	));
-
-	Route::get('/', array(
-		'as'	=>	'home_routeA',
+		'as'	=>	'home',
 		'uses'	=>	'AdminController@showAdminDashboard'
 	));
 
@@ -73,12 +70,12 @@ Route::group(array('prefix' => 'admin', 'before' => 'auth.admin'),function(){
 
 /*University Admin*/
 Route::get('/uadmin_dashboard', array(
-	'as'	=>	'home_routeUA1',
+	'as'	=>	'univ_admin_home',
 	'uses'	=>	'UniversityAdminController@showUAdminDashboard'
 ));
 
 Route::get('/', array(
-	'as'	=>	'home_routeUA',
+	'as'	=>	'univ_admin_dashboard',
 	'uses'	=>	'UniversityAdminController@showUAdminDashboard'
 ));
 
@@ -86,8 +83,4 @@ Route::get('/uadmin_conversations', 'UniversityAdminController@showUAdminConvers
 Route::get('/uadmin_manage_alumni', 'UniversityAdminController@showUManageAdminAlumni');
 Route::get('/uadmin_statistics', 'UniversityAdminController@showUAdminStats');
 Route::get('/uadmin_broadcasts', 'UniversityAdminController@showUAdminBroadcasts');
-Route::get('/register_alumni_pg1', 'UniversityAdminController@showRegisterAlumni1');
-Route::get('/register_alumni_pg2', 'UniversityAdminController@showRegisterAlumni2');
-Route::get('/register_alumni_pg3', 'UniversityAdminController@showRegisterAlumni3');
-Route::get('/register_alumni_pg4', 'UniversityAdminController@showRegisterAlumni4');
 /*End University Admin*/

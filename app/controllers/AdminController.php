@@ -46,41 +46,41 @@ class AdminController extends BaseController {
 
 	public function showAdminLogin() 
 	{
-		return	View::make('admin/admin_login')
+		return	View::make('admin/login')
 			->with('title', 'Login');
 	}
 
 	public function goLogin()
     {
-            $validation = User::validate(Input::all());
+        $validation = User::validate(Input::all());
 
-            if(!($validation->fails())){
-                    if(Auth::attempt(array(
-                            'username'        => Input::get('username'),
-                            'password'        => Input::get('password'),
-                            'role'                => 'admin'
-                            ))){
-                            return Redirect::Route('home_routeA1');
-                    } else {
-                            return Redirect::Route('admin-login')
-                                    ->withErrors('Incorrect username or password')
-                                    ->withInput(Input::except('password'));
-                    }
-            }else{
-                    return Redirect::Route('admin-login')
-                            ->withErrors($validation)
-                            ->withInput(Input::except('password'));
+        if(!($validation->fails())){
+            if(Auth::attempt(array(
+                'username' => Input::get('username'),
+                'password' => Input::get('password'),
+                'role'     => 'admin'
+            ))){
+                return Redirect::Route('home');
+            } else {
+                return Redirect::Route('admin-login')
+                    ->withErrors('Incorrect username or password')
+                    ->withInput(Input::except('password'));
             }
+        } else {
+            return Redirect::Route('admin-login')
+                    ->withErrors($validation)
+                    ->withInput(Input::except('password'));
+        }
     }
 
     public function goLogout()
     {
-            Auth::logout();
-            if(Auth::guest()){
-                    return Redirect::Route('admin-login');
-            }else {
-                    return Redirect::Route('home_routeA1');
-            }
+        Auth::logout();
+        if(Auth::guest()){
+                return Redirect::Route('admin-login');
+        }else {
+                return Redirect::Route('home');
+        }
     }
  
 }
