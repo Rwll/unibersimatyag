@@ -65,6 +65,23 @@ Route::group(array('prefix' => 'admin', 'before' => 'auth.admin'),function(){
 		'as'	=>	'admin-broadcasts',
 		'uses'	=>	'AdminController@showAdminBroadcasts'
 	));
+
+	//Manage Universities
+
+	Route::post('/add_university', array(
+            'as'   => 'add-university',
+            'uses' => 'AdminController@addUniversity'
+    ));
+
+	Route::get('/add_university_failed', array(
+            'as'   => 'add-university-failed',
+            'uses' => 'AdminController@addUniversityFailed'
+    ));
+
+	Route::get('/add_university_success', array(
+            'as'   => 'add-university-success',
+            'uses' => 'AdminController@addUniversitySuccess'
+    ));
 });
 /*End Super Admin*/
 

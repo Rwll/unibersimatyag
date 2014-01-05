@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'url' => 'http://localhost/AlumniTracking/public/',
+	'url' => 'http://localhost/AlumniTracking/public',
 
 	/*
 	|--------------------------------------------------------------------------

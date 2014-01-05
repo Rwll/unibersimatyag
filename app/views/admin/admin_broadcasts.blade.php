@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Broadcasts</title>
+        <title>{{ $title }}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         {{ HTML::style('assets/css/bootstrap.css') }}
         {{ HTML::style('assets/font-awesome/css/font-awesome.css') }}
     </head>
+    
     <body>
         @include('site_objects.admin.navbar')
         <br>
@@ -18,11 +19,11 @@
                     @include('site_objects.admin.activity_logs')
                 </div>
                 <h1>Broadcasts!</h1>
-                    </div>
-                </div>
             </div>
         </div>
         @include('site_objects.admin.footer')
+
+
         {{ HTML::script('assets/js/jquery.js') }}
 		{{ HTML::script('assets/js/bootstrap.min.js') }}
     </body>
