@@ -24,10 +24,12 @@
         <div class="col-md-9">
 	        <ul class="nav nav-tabs">
 	            <li class="active">
-	                <a href="#tab1" data-toggle="tab">Universities</a>
+	                <a href="#tab1" data-toggle="tab">
+	                <i class="fa fa-building fa-fw" ></i> University Listings</a>
 	            </li>
 	            <li>
-	            	<a href="#tab2" data-toggle="tab">Add University</a>
+	            	<a href="#tab2" data-toggle="tab">
+	            	<i class="fa fa-list-alt fa-fw" ></i> Add University</a>
 	            </li>
 	        </ul>
 
@@ -37,26 +39,37 @@
                 <div class="panel-body">
                     <div class="panel panel-default">
                         <!-- Table -->
-                        <table class="table table-hover">
+                        <table id="universities" class="table table-hover">
                             <tr>
+                            	<th>ID</th>
                                 <th>College/University Name</th>
-                                <th>Date Registered</th>
                                 <th>Website</th>
-                                <th>Administrator</th>
+                                <th>Email</th>
+                                <th>Address</th>
+                                <th>Description</th>
                                 <th>Options</th>
                             </tr>
+                            @foreach($universities as $universityList)
                             <tr>
-                                <td>University of PogiProblems</td>
-                                <td>07/28/2013</td>
-                                <td><a href = "pogiproblems.edu.au">
-                                    pogiproblems.edu.au</a>
-                                </td>
-                                <td>Ih Kaw Nga</td>
+                                <td>{{ $university->id }}</td>
+                                <td>{{ $university->name }}</td>
+                                <td>{{ $university->website }}</td>
+                                <td>{{ $university->email }}</td>
+                                <td>{{ $university->address }}</td>
+                                <td>{{ $university->description }}</td>
                                 <td>
-                                    <button class="btn btn-primary btn-xs" 
-                                        data-toggle="modal" data-target="#myModal">
-                                    Detail Settings
-                                    </button>
+				                  <div class="btn-group">
+				                  <label class="btn btn-default btn-xs">Options</label>
+				                  <button type="button" class="btn btn-default dropdown-toggle btn-xs" data-toggle="dropdown"><span class="caret"></span></button>
+				                  <ul class="dropdown-menu">
+				                    <li><a href="#">Update Details</a></li>
+				                    <li><a href="#">Post an announcement</a></li>
+				                    <li><a href="#">Disable University</a></li> 
+				                  </ul>
+				                </div><!-- /btn-group -->
+
+                                     
+
                                     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
@@ -115,10 +128,7 @@
                                         
                                     </div>
                                     
-                        <button class="btn btn-danger btn-xs" 
-                            data-toggle="modal" data-target="#myModal1">
-                        Disable
-                        </button>
+                       
 
                         <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
@@ -202,6 +212,7 @@
                             <div class="col-sm-offset-2 col-sm-10">
                                 <button class="btn btn-primary btn-xs" 
                                         data-toggle="modal" data-target="#myModal3">
+                                        <i class="fa fa-plus fa-fw" ></i>
                                     Add University
                                     </button>
                                     <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

@@ -61,11 +61,7 @@ Route::group(array('prefix' => 'admin', 'before' => 'auth.admin'),function(){
 		'uses'	=>	'AdminController@showAdminStats'
 	));
 
-	Route::get('/admin_broadcasts', array(
-		'as'	=>	'admin-broadcasts',
-		'uses'	=>	'AdminController@showAdminBroadcasts'
-	));
-
+	
 	//Manage Universities
 
 	Route::post('/add_university', array(
@@ -99,5 +95,5 @@ Route::get('/uadmin_home', array(
 Route::get('/uadmin_conversations', 'UniversityAdminController@showUAdminConversations');
 Route::get('/uadmin_manage_alumni', 'UniversityAdminController@showUManageAdminAlumni');
 Route::get('/uadmin_statistics', 'UniversityAdminController@showUAdminStats');
-Route::get('/uadmin_broadcasts', 'UniversityAdminController@showUAdminBroadcasts');
+
 /*End University Admin*/

@@ -17,7 +17,4 @@
     <a href="admin_statistics" 
         class="list-group-item @if($title == 'Statistics') active @endif">
     <i class="fa fa-signal fa-fw"></i> Statistics</a>
-    <a href="admin_broadcasts" 
-        class="list-group-item @if($title == 'Broadcasts') active @endif">
-    <i class="fa fa-bell-o fa-fw"></i> Broadcasts</a>
 </div>

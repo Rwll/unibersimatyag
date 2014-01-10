@@ -21,10 +21,17 @@
                 <div class="col-md-9">
                     <ul class="nav nav-tabs">
                         <li class="active">
-                            <a href="#tab1" data-toggle="tab">Create Message</a>
+                            <a href="#tab1" data-toggle="tab">
+                            <i class="fa fa-pencil fa-fw" ></i> 
+                            Create Message</a>
                         </li>
-                        <li><a href="#tab2" data-toggle="tab">Inbox</a></li>
-                        <li><a href="#tab3" data-toggle="tab">Sent</a></li>
+                        <li><a href="#tab2" data-toggle="tab">
+                        <i class="fa fa-envelope fa-fw" ></i> Inbox
+                        <span class="badge">5</span></a>
+                        </li>
+                        <li><a href="#tab3" data-toggle="tab">
+                        <i class="fa fa-level-up fa-fw" ></i>
+                        Sent</a></li>
                     </ul>
 
 	                <div class="tab-content">
@@ -35,7 +42,7 @@
 	                                <div class="row">
 	                                    <div class="form-group col-md-6">
 	                                        <label for="recipients"><strong> 
-	                                        Recipients</strong></label>
+	                                        To:</strong></label>
 	                                        <div class="input-group">
 	                                            <input type="text" 
 	                                            class="form-control" 
@@ -67,6 +74,9 @@
 	                                        </label>
 	                                        <textarea class="form-control" 
 	                                        rows="3"></textarea>
+	                                        <label><strong><span class="badge">
+	                                        160</span> characters left</strong>
+	                                        </label>
 	                                    </div>
 	                                </div>
 	                                <div class="row">

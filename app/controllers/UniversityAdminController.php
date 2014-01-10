@@ -23,10 +23,6 @@ class UniversityAdminController extends BaseController {
 		return	View::make('university_admin/uadmin_statistics');
 	}
 
-	public function showUAdminBroadcasts() 
-	{
-		return	View::make('university_admin/uadmin_broadcasts');
-	}
 	/*End Univer... */
 
 }

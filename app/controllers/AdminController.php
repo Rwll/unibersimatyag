@@ -38,12 +38,6 @@ class AdminController extends BaseController {
 			->with('title', 'Statistics');
 	}
 
-	public function showAdminBroadcasts() 
-	{
-		return	View::make('admin/admin_broadcasts')
-			->with('title', 'Broadcasts');
-	}
-
 	public function showAdminLogin() 
 	{
 		return	View::make('admin/login')
