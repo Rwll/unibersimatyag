@@ -16,8 +16,10 @@ class AdminController extends BaseController {
 
 	public function showManageAdminUniversities() 
 	{
-		return	View::make('admin/admin_manage_universities')
-			->with('title', 'Manage Universities');
+		$universities = University::get();
+                return View::make('admin/admin_manage_universities')
+                	->with('title', 'Manage Universities')
+                	->with('universities', $universities);
 	}
 
 	public function showManageAdminAlumni() 
@@ -82,13 +84,15 @@ class AdminController extends BaseController {
     //Login
 
     //Manage Universities
+    
 
     public function addUniversity()
         {
             $validation = University::validate(Input::all());
 
             if($validation->fails()){
-                return Redirect::Route('add-university-failed');
+                return Redirect::Route('add-university-failed')
+                	->withErrors($validation);
                     
             }else{
                 $university = new University();

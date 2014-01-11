@@ -17,7 +17,7 @@ class Universities extends Migration {
 	        $table->string('name');
 	        $table->string('website');
 	        $table->string('email');
-	        $table->integer('contact_number');
+	        $table->string('contact_number');
 	        $table->string('address');
 	        $table->string('description');
 	        $table->timestamps();

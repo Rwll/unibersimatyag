@@ -38,7 +38,7 @@
 
 
  						<button onclick=location.href="{{ URL::Route('admin-manage-universities') }}" 
- 								class="btn btn-warning btn-xs" 
+ 								class="btn btn-default btn-xs" 
                                 data-toggle="modal" data-target="#myModal3">
                             Go back!
                         </button>

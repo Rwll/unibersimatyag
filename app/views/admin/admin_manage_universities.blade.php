@@ -46,28 +46,25 @@
                                 <th>Website</th>
                                 <th>Email</th>
                                 <th>Address</th>
-                                <th>Description</th>
                                 <th>Options</th>
                             </tr>
                             @foreach($universities as $universityList)
                             <tr>
-                                <td>{{ $university->id }}</td>
-                                <td>{{ $university->name }}</td>
-                                <td>{{ $university->website }}</td>
-                                <td>{{ $university->email }}</td>
-                                <td>{{ $university->address }}</td>
-                                <td>{{ $university->description }}</td>
+                                <td>{{ $universityList->id }}</td>
+                                <td>{{ $universityList->name }}</td>
+                                <td>{{ $universityList->website }}</td>
+                                <td>{{ $universityList->email }}</td>
+                                <td>{{ $universityList->address }}</td>
                                 <td>
 				                  <div class="btn-group">
-				                  <label class="btn btn-default btn-xs">Options</label>
-				                  <button type="button" class="btn btn-default dropdown-toggle btn-xs" data-toggle="dropdown"><span class="caret"></span></button>
-				                  <ul class="dropdown-menu">
-				                    <li><a href="#">Update Details</a></li>
-				                    <li><a href="#">Post an announcement</a></li>
-				                    <li><a href="#">Disable University</a></li> 
-				                  </ul>
-				                </div><!-- /btn-group -->
-
+					                  <button type="button" class="btn btn-default dropdown-toggle btn-xs" data-toggle="dropdown"><span class="caret"></span></button>
+					                  <ul class="dropdown-menu">
+					                    <li><a href="#">Update Details</a></li>
+					                    <li><a href="#">Post an announcement</a></li>
+					                    <li><a href="#">Disable University</a></li> 
+					                  </ul>
+				                  </div><!-- /btn-group -->
+				            @endforeach
                                      
 
                                     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -243,5 +240,6 @@
         {{ HTML::script('assets/js/admin-navigation.js') }}
         {{ HTML::script('assets/js/jquery.js') }}
 		{{ HTML::script('assets/js/bootstrap.min.js') }}
+
     </body>
 </html>

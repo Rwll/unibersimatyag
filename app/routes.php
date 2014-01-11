@@ -64,6 +64,11 @@ Route::group(array('prefix' => 'admin', 'before' => 'auth.admin'),function(){
 	
 	//Manage Universities
 
+	Route::post('/view_university', array(
+            'as'   => 'view-university',
+            'uses' => 'AdminController@viewUniversity'
+    ));
+
 	Route::post('/add_university', array(
             'as'   => 'add-university',
             'uses' => 'AdminController@addUniversity'
