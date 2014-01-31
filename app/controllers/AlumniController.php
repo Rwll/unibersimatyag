@@ -64,10 +64,6 @@ class AlumniController extends BaseController {
 	}
 	/*End Alumni */
 
-	public function show404() 
-	{
-		return View::make('others/404')
-			->with('title', 'Error!');
-	}
+	
 
 }
