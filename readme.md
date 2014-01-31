@@ -1,4 +1,4 @@
 unibersimatyag
 
-Implementation of Alumnin Tracking System
+Implementation of Alumni Tracking System
 ==============
