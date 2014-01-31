@@ -21,6 +21,9 @@
                             </div>
                             <div class="panel-body">
                                 <form>
+                                	<div class="progress progress-striped active">
+                <div class="progress-bar" style="width: 75%"></div>
+              </div>
                                     <h4><strong><center>EMPLOYMENT DETAILS
                                     </center></strong></h4>
                                     <div class="form-group col-md-8">
@@ -43,7 +46,7 @@
                                         value="contractual"> Contractual<br><br>
                                     	<button onclick=location.href="register_alumni_pg4" 
                                     	type="button" 
-                                    	class="btn btn-primary btn-sm">
+                                    	class="btn btn-primary btn-sm col-md-offset-12">
                                     	<i class="fa fa-arrow-circle-o-right">	
                                     	</i> Next</button>
                                 	</div>  

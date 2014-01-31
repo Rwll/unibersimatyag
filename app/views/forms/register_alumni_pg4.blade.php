@@ -21,6 +21,9 @@
                             </div>
                             <div class="panel-body">
                                 <form>
+                                	<div class="progress progress-striped active">
+                <div class="progress-bar" style="width: 100%"></div>
+              </div>
                                     <h4><strong><center>CONTACT DETAILS
                                     </center></strong></h4>
                                     <div class="form-group col-md-8">
@@ -42,7 +45,7 @@
                                     	<button data-toggle="modal" 
                                     	data-target="#myModal" 
                                     	type="submit" 
-                                    	class="btn btn-primary btn-sm">
+                                    	class="btn btn-primary btn-sm col-md-offset-6">
                                     	<i class="fa fa-arrow-circle-o-right">	
                                     	</i> Finish and Submit</button>
                                 	</div>  

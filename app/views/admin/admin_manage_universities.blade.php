@@ -34,7 +34,6 @@
 	        </ul>
 
         <div class="tab-content">
-
             <div class="tab-pane panel panel-default active" id="tab1">
                 <div class="panel-body">
                     <div class="panel panel-default">
@@ -237,7 +236,6 @@
             </div>
         </div>
         @include('site_objects.admin.footer')
-        {{ HTML::script('assets/js/admin-navigation.js') }}
         {{ HTML::script('assets/js/jquery.js') }}
 		{{ HTML::script('assets/js/bootstrap.min.js') }}
 

@@ -21,6 +21,9 @@
                             </div>
                             <div class="panel-body">
                                 <form>
+                                <div class="progress progress-striped active">
+                <div class="progress-bar" style="width: 25%"></div>
+              </div>
                                     <h4><strong><center>PERSONAL DETAILS
                                     </center></strong></h4>
                                     <div class="form-group col-md-8">
@@ -48,7 +51,7 @@
                                     	<input type="date"></label><br><br>
                                     	<button onclick=location.href="register_alumni_pg2" 
                                     	type="button" 
-                                    	class="btn btn-primary btn-sm">
+                                    	class="btn btn-primary btn-sm col-md-offset-8">
                                     	<i class="fa fa-arrow-circle-o-right">	
                                     	</i> Next</button>
                                 	</div>  

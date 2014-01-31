@@ -36,7 +36,7 @@
 
 	                	<div class="alert alert-warning alert-dismissable">
 						<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-						<strong>Warning!</strong> Best check yo self, you're not looking too good.
+						Make sure to fill up all the fields.
 						</div>
                         <div class="alert alert-danger alert-dismissable">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>

@@ -5,47 +5,68 @@ class AdminController extends BaseController {
 	public function showAdminDashboard() 
 	{
 		return View::make('admin/admin_dashboard')
-			->with('title', 'Dashboard');
+			    ->with('title', 'Dashboard');
 	}
 
 	public function showAdminConversations() 
 	{
-		return	View::make('admin/admin_conversations')
-			->with('title', 'Conversations');
+		return View::make('admin/admin_conversations')
+				->with('title', 'Conversations');
 	}
 
 	public function showManageAdminUniversities() 
 	{
 		$universities = University::get();
-                return View::make('admin/admin_manage_universities')
+            return View::make('admin/admin_manage_universities')
                 	->with('title', 'Manage Universities')
                 	->with('universities', $universities);
 	}
 
 	public function showManageAdminAlumni() 
 	{
-		return	View::make('admin/admin_manage_alumni')
-			->with('title', 'Manage Alumni');
+		return View::make('admin/admin_manage_alumni')
+			    ->with('title', 'Manage Alumni');
 	}
 
 	public function showManageAdminAdministrators() 
 	{
-		return	View::make('admin/admin_manage_administrators')
-			->with('title', 'Manage Administrators');
+		$universities = University::get();
+		return View::make('admin/admin_manage_administrators')
+			    ->with('title', 'Manage Administrators')
+			    ->with('universities', $universities);
 	}
 
 	public function showAdminStats() 
 	{
-		return	View::make('admin/admin_statistics')
-			->with('title', 'Statistics');
+		return View::make('admin/admin_statistics')
+			    ->with('title', 'Statistics');
 	}
 
 	public function showAdminLogin() 
 	{
-		return	View::make('admin/login')
-			->with('title', 'Login');
+		return View::make('admin/admin_login')
+			    ->with('title', 'Login');
 	}
 
+	//navbar section
+
+	public function showAdminProfile() 
+	{
+		return View::make('admin/admin_profile')
+			    ->with('title', 'Profile');
+	}
+
+	public function showAdminAccountSettings() 
+	{
+		return View::make('admin/admin_account_settings')
+			    ->with('title', 'Account Settings');
+	}
+
+	public function showAdminActivityLogs() 
+	{
+		return View::make('admin/admin_activity_logs')
+			    ->with('title', 'Activity Logs');
+	}
 
 	//Login
 	public function goLogin()
@@ -58,7 +79,7 @@ class AdminController extends BaseController {
                 'password' => Input::get('password'),
                 'role'     => 'admin'
             ))){
-                return Redirect::Route('home');
+                return Redirect::Route('admin-dashboard');	
             } else {
                 return Redirect::Route('admin-login')
                     ->withErrors('Incorrect username or password')
@@ -66,8 +87,8 @@ class AdminController extends BaseController {
             }
         } else {
             return Redirect::Route('admin-login')
-                    ->withErrors($validation)
-                    ->withInput(Input::except('password'));
+                ->withErrors($validation)
+                ->withInput(Input::except('password'));
         }
     }
 
@@ -75,9 +96,9 @@ class AdminController extends BaseController {
     {
         Auth::logout();
         if(Auth::guest()){
-                return Redirect::Route('admin-login');
+            return Redirect::Route('admin-login');
         }else {
-                return Redirect::Route('home');
+            return Redirect::Route('admin-dashboard');
         }
     }
 
@@ -92,8 +113,7 @@ class AdminController extends BaseController {
 
             if($validation->fails()){
                 return Redirect::Route('add-university-failed')
-                	->withErrors($validation);
-                    
+                	    ->withErrors($validation);
             }else{
                 $university = new University();
                 $university->name = Input::get('name');
@@ -110,13 +130,13 @@ class AdminController extends BaseController {
 
     public function addUniversityFailed() 
 	{
-		return	View::make('admin/add_university_failed')
-			->with('title', 'Add University Failed');
+		return View::make('admin/add_university_failed')
+			    ->with('title', 'Add University Failed');
 	}
 	
 	public function addUniversitySuccess() 
 	{
-		return	View::make('admin/add_university_success')
-			->with('title', 'Add University Success');
+		return View::make('admin/add_university_success')
+			    ->with('title', 'Add University Success');
 	} 
 }
