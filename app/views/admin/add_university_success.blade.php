@@ -31,9 +31,7 @@
                 		<h3 class="panel-title">Added Successfully!</h3>
               			</div>
               			
-                        <div class="panel-body">
-	                	
-	                	</div>
+               
             		    </div>
 
 

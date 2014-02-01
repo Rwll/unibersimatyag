@@ -9,7 +9,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <label class="navbar-brand">Hi,</label><a class="navbar-brand" href="{{ URL::Route('admin-profile') }}"> {{ Auth::user()->username }} !</a>
+            <label class="navbar-brand">Hi,</label><a class="navbar-brand" href="{{ URL::Route('admin-profile') }}"> {{ Auth::user()->username }}</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

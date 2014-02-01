@@ -61,6 +61,8 @@
                 </div>
             </div>
         </div>
+
+        </div>
         
         @include('site_objects.admin.footer')
 

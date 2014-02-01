@@ -102,7 +102,7 @@ class AdminController extends BaseController {
         }
     }
 
-    //Login
+    // end Login
 
     //Manage Universities
     
@@ -138,5 +138,13 @@ class AdminController extends BaseController {
 	{
 		return View::make('admin/add_university_success')
 			    ->with('title', 'Add University Success');
+	}
+	
+	public function showAdminUpdateUnivInfo() 
+	{
+		return View::make('admin/admin_update_univ_info')
+			    ->with('title', 'Update University Details');
 	} 
+
+
 }

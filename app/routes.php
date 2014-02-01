@@ -65,6 +65,7 @@ Route::group(array('prefix' => 'admin', 'before' => 'auth.admin'),function(){
 		'as'	=>	'admin-activity-logs',
 		'uses'	=>	'AdminController@showAdminActivityLogs'
 	));
+
 	
 	//Manage Universities
 
@@ -87,7 +88,13 @@ Route::group(array('prefix' => 'admin', 'before' => 'auth.admin'),function(){
             'as'   => 'add-university-success',
             'uses' => 'AdminController@addUniversitySuccess'
     ));
+    
 });
+
+	Route::get('/admin_update_univ_info', array(
+		'as'	=>	'admin-update-univ-info',
+		'uses'	=>	'AdminController@showAdminUpdateUnivInfo'
+	));
 
 // End Super Admin
 
